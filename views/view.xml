@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="res_users_form" model="ir.ui.view">
+			<field name="name">res.users.form</field>
+			<field name="model">res.users</field>
+			<field name="inherit_id" ref="base.view_users_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[@class='oe_title']" position="after">
+    				<group>
+					    <field name="token"/>
+                        <field name="url_token" widget="url"/>
+                        <field name="redirect"/>
+    				</group>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</openerp>
